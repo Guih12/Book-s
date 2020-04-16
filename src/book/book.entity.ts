@@ -10,7 +10,7 @@ export class Book{
 
     @Column({type: 'varchar', length: 255, nullable: false}) description: string;
 
-    @Column({type: 'integer', length: 255, nullable: false}) user_id: number;
+    @Column({type: 'integer', nullable: false}) user_id: number;
 
     @CreateDateColumn({type: 'timestamptz', nullable: true}) created_at: Date;
 
