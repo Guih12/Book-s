@@ -26,14 +26,14 @@ export class UserController {
     }
 
     //altera dados de usuários
-    @Put('id:/update')
+    @Put(':id/update')
     async update(@Param('id') id: number, @Body() user: User): Promise<any>{
         user.id= id
         return await this.userService.update(user);
     }
 
     //deleta usuários
-    @Delete('id:/delte')
+    @Delete(':id/delete')
     async delete(@Param('id') id: number): Promise<any>{
         return this.userService.delete(id);
     }
